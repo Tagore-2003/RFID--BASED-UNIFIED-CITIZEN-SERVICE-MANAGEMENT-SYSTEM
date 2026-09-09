@@ -32,10 +32,6 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 <p align="center">
 <img width="1600" height="878" alt="WhatsApp Image 2026-09-09 at 10 35 02 AM" src="https://github.com/user-attachments/assets/e56b7281-3ca6-4d62-adc6-b6fe4c506c53" />
 <img width="1600" height="858" alt="WhatsApp Image 2026-09-09 at 10 37 04 AM" src="https://github.com/user-attachments/assets/fa709ad2-a9fd-4413-9e81-31f21835876a" />
-<img width="1273" height="736" alt="WhatsApp Image 2026-09-09 at 10 39 56 AM" src="https://github.com/user-attachments/assets/9fa5a1ae-b2dc-46c8-a0d4-e1341a86b7cc" />
-
-</p>
-
 <p align="center">
   <img width="1599" height="920" alt="WhatsApp Image 2026-09-09 at 10 47 45 AM" src="https://github.com/user-attachments/assets/84ff78e6-cb2a-41d7-9466-2cd0cd33e4d9" />
 
