@@ -11,10 +11,10 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 - **Persistent data** — account balances, voting flags, and PINs are retained in a 25LC512-compatible SPI EEPROM.
 - **Responsive UI** — keypad input uses debounce handling and timeout-aware scanning; RFID reception is interrupt-driven.
 
-## System architecture
+## Hardwar architecture
 
 <p align="center">
-<img width="1200" height="790" alt="Block_diagram" src="https://github.com/user-attachments/assets/148547b6-fdea-4f40-b188-038b22afd5fe" />
+ <img width="1200" height="790" alt="Block_diagram" src="https://github.com/user-attachments/assets/148547b6-fdea-4f40-b188-038b22afd5fe" />
 </p>
 
 | Block | Role |
@@ -27,11 +27,16 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 | LEDs and buzzer | Give immediate success, failure, and officer-access feedback. |
 | RTC | Maintains date and time, with officer-controlled editing. |
 
+## System Architecture
+<p align="center">
+ <img width="1536" height="1024" alt="software rfid image" src="https://github.com/user-attachments/assets/3b6ebbd8-ca0d-414b-9658-1aa57fa1afda" />
+</p>
+
 ## Demonstrated workflow
 
 <p align="center">
-<img width="1600" height="878" alt="WhatsApp Image 2026-09-09 at 10 35 02 AM" src="https://github.com/user-attachments/assets/e56b7281-3ca6-4d62-adc6-b6fe4c506c53" />
-<img width="1600" height="858" alt="WhatsApp Image 2026-09-09 at 10 37 04 AM" src="https://github.com/user-attachments/assets/fa709ad2-a9fd-4413-9e81-31f21835876a" />
+ <img width="1600" height="878" alt="WhatsApp Image 2026-09-09 at 10 35 02 AM" src="https://github.com/user-attachments/assets/e56b7281-3ca6-4d62-adc6-b6fe4c506c53" />
+ <img width="1600" height="858" alt="WhatsApp Image 2026-09-09 at 10 37 04 AM" src="https://github.com/user-attachments/assets/fa709ad2-a9fd-4413-9e81-31f21835876a" />
 </p>
 
 1. Power on the system; it shows the RFID scan prompt.
