@@ -20,8 +20,7 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 ## System architecture
 
 <p align="center">
-  <img width="720" height="1600" alt="WhatsApp Image 2026-09-09 at 2 09 54 PM" src="https://github.com/user-attachments/assets/6f091789-984c-4a35-bcda-37096204d5b0" />
-
+<img width="1200" height="790" alt="Block_diagram" src="https://github.com/user-attachments/assets/148547b6-fdea-4f40-b188-038b22afd5fe" />
 </p>
 
 | Block | Role |
