@@ -1,9 +1,14 @@
-# RFID-Based Unified Citizen Service Management System
+##🏷️ RFID Unified Citizen System
+![Microcontroller](https://img.shields.io/badge/Microcontroller-LPC2148-blue.svg)
+![Language](https://img.shields.io/badge/Language-Embedded%20C-orange.svg)
+![IDE](https://img.shields.io/badge/IDE-Keil%20uVision-green.svg)
+![Status](https://img.shields.io/badge/Status-Complete-success.svg)
 
-> An embedded-C RFID access and citizen-service terminal for the NXP LPC21xx ARM7 family.
+An advanced embedded system project built on the **LPC2148 (ARM7TDMI-S)** microcontroller. This project implements a comprehensive **Unified Citizen System**, integrating critical utility databases and financial services into a single multi-purpose RFID smart card interface. 
 
-The system reads an RFID card over UART, authenticates the card ID, stores persistent state in an SPI EEPROM, and presents citizen or officer services through a 20×4 LCD and 4×4 keypad. It is designed and demonstrated on real hardware—not as a simulator.
-## Highlights
+By scanning a unique citizen RFID card, authenticated users can access their Banking (ATM), Voting, Driving License status, and PAN details seamlessly through an interactive LCD and Keypad interface.
+
+---
 
 - **RFID authentication** — valid citizen, officer, and unrecognized card flows with LCD, LED, buzzer, and UART feedback.
 - **Citizen dashboard** — PAN-style details, ATM balance/withdrawal/deposit flow, voting status, and driving-licence information.
