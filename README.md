@@ -32,6 +32,10 @@ The codebase is structured modularly to separate the low-level peripheral driver
 <p align="center">
  <img width="1536" height="1024" alt="software rfid image" src="https://github.com/user-attachments/assets/3b6ebbd8-ca0d-414b-9658-1aa57fa1afda" />
 </p>
+### Firmware Modules & Responsibilities
+Each C file is compiled and linked with specific functional responsibilities to form the unified binary:
+<img width="1536" height="1024" alt="Modules menu" src="https://github.com/user-attachments/assets/c19456e9-f42f-4cae-b396-5cd5ab32e9eb" />
+
 
 ## Demonstrated workflow
 
@@ -45,13 +49,8 @@ The codebase is structured modularly to separate the low-level peripheral driver
 3. Use the keypad to view records or use the ATM, voting, and licence services.
 4. Present the officer card for administrative controls.
 5. Unknown cards are rejected with the red LED and buzzer.
-
-### Firmware Modules & Responsibilities
-Each C file is compiled and linked with specific functional responsibilities to form the unified binary:
-<img width="1536" height="1024" alt="Modules menu" src="https://github.com/user-attachments/assets/c19456e9-f42f-4cae-b396-5cd5ab32e9eb" />
-
+6. 
 ## LCD interface
-
 <p align="center">
   <img width="1268" height="772" alt="citizen_service_menu" src="https://github.com/user-attachments/assets/4c234ab6-8281-4124-9c2c-67e096568098" />
   <img width="1600" height="1039" alt="WhatsApp Image 2026-09-09 at 2 21 38 PM" src="https://github.com/user-attachments/assets/7f2fad9b-2785-4028-8fb7-   95d3c63e8bbb" />
