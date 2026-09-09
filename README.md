@@ -17,7 +17,7 @@ By scanning a unique citizen RFID card, authenticated users can access their Ban
 - **Persistent data** — account balances, voting flags, and PINs are retained in a 25LC512-compatible SPI EEPROM.
 - **Responsive UI** — keypad input uses debounce handling and timeout-aware scanning; RFID reception is interrupt-driven.
 
-## Hardwar architecture
+## Hardware architecture
 The overall system layout connects the main controller block to various sensors, displays, inputs, and memory storage.
 <p align="center">
  <img width="1200" height="790" alt="Block_diagram" src="https://github.com/user-attachments/assets/148547b6-fdea-4f40-b188-038b22afd5fe" />
@@ -38,7 +38,8 @@ The codebase is structured modularly to separate the low-level peripheral driver
 <p align="center">
  <img width="1536" height="1024" alt="software rfid image" src="https://github.com/user-attachments/assets/3b6ebbd8-ca0d-414b-9658-1aa57fa1afda" />
 </p>
-### Firmware Modules & Responsibilities
+
+## Frimware Modules and Reesponsibilites 
 Each C file is compiled and linked with specific functional responsibilities to form the unified binary:
 <img width="1536" height="1024" alt="Modules menu" src="https://github.com/user-attachments/assets/c19456e9-f42f-4cae-b396-5cd5ab32e9eb" />
 
@@ -67,24 +68,6 @@ Each C file is compiled and linked with specific functional responsibilities to 
   <img width="1280" height="760" alt="RTC" src="https://github.com/user-attachments/assets/d2266567-1daf-4a95-9d46-713b00b89614" />
 
 </p>
-
-The firmware expects RFID frames delimited by **STX** (`0x02`) and **ETX** (`0x03`) and compares the first eight received ID characters with its configured records. Use only authorised test cards when modifying the card database.
-## 🗺️ Main Program Flow Chart
-Here is the detailed sequential logic executed by the main program:
-
-![Main Program Flow](./New%20images/Main%20Program%20Flow%20Chart%20RFID.png)
-
-### User Menu Navigation Tree
-The interactive menu system branches out logically depending on user keystrokes:
-
-![Menu Structure](./New%20images/user%20menu%20image.png)
-
-### Firmware Modules & Responsibilities
-Each C file is compiled and linked with specific functional responsibilities to form the unified binary:
-
-![Modules and Responsibilities](./New%20images/Modules%20menu.png)
-
----
 
 ## ✨ System Features in Detail
 
@@ -119,9 +102,7 @@ The system relies on an external **AT25LC512 (512Kbit / 64KB)** EEPROM over SPI0
     *   **Valid License:** Displays license details, illuminates the Green LED, and silences any buzzer alarms.
     *   **Expired License:** Flashes a custom-built CGRAM "Bold Cross (✖)" icon on the LCD, turns on the Red LED, and sounds a warning Buzzer.
 *   **Custom Graphics:** Built-in CGRAM design templates inject custom validation marks directly into the HD44780 LCD module memory:
-![Data Storage Layout](./New%20images/Data%20storage.png)
-
-
+  
 ---
 
 
