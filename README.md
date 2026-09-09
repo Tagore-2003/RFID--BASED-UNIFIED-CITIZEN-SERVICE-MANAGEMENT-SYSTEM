@@ -32,9 +32,6 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 <p align="center">
 <img width="1600" height="878" alt="WhatsApp Image 2026-09-09 at 10 35 02 AM" src="https://github.com/user-attachments/assets/e56b7281-3ca6-4d62-adc6-b6fe4c506c53" />
 <img width="1600" height="858" alt="WhatsApp Image 2026-09-09 at 10 37 04 AM" src="https://github.com/user-attachments/assets/fa709ad2-a9fd-4413-9e81-31f21835876a" />
-<p align="center">
-  <img width="1599" height="920" alt="WhatsApp Image 2026-09-09 at 10 47 45 AM" src="https://github.com/user-attachments/assets/84ff78e6-cb2a-41d7-9466-2cd0cd33e4d9" />
-
 </p>
 
 1. Power on the system; it shows the RFID scan prompt.
@@ -47,27 +44,13 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 
 <p align="center">
   <img width="1268" height="772" alt="citizen_service_menu" src="https://github.com/user-attachments/assets/4c234ab6-8281-4124-9c2c-67e096568098" />
+  <img width="1600" height="1039" alt="WhatsApp Image 2026-09-09 at 2 21 38 PM" src="https://github.com/user-attachments/assets/7f2fad9b-2785-4028-8fb7-   95d3c63e8bbb" />
   <img width="1599" height="920" alt="Pan" src="https://github.com/user-attachments/assets/ee1c4891-aed1-42ca-906c-1462aaa80ebf" />
   <img width="1280" height="766" alt="ATM_interfcae" src="https://github.com/user-attachments/assets/8e3e2b73-26e0-4027-87b3-6b985dbfd923" />
-</p>
-
-<p align="center">
-  <img width="1600" height="1039" alt="WhatsApp Image 2026-09-09 at 2 21 38 PM" src="https://github.com/user-attachments/assets/7f2fad9b-2785-4028-8fb7-95d3c63e8bbb" />
   <img src="docs/images/officer-card.jpg" alt="Officer RFID card confirmation screen on LCD" width="31%">
-</p>
-
-<p align="center">
   <img width="1280" height="760" alt="RTC" src="https://github.com/user-attachments/assets/d2266567-1daf-4a95-9d46-713b00b89614" />
 
 </p>
-
-## RFID cards
-
-<p align="center">
-  <img src="docs/images/rfid-card-anatomy.jpg" alt="RFID card showing its antenna and integrated circuit" width="38%">
-  <img src="docs/images/rfid-cards.jpg" alt="RFID cards used for the project" width="38%">
-</p>
-
 The firmware expects RFID frames delimited by **STX** (`0x02`) and **ETX** (`0x03`) and compares the first eight received ID characters with its configured records. Use only authorised test cards when modifying the card database.
 
 ## Wiring reference
