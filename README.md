@@ -28,6 +28,7 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 | RTC | Maintains date and time, with officer-controlled editing. |
 
 ## System Architecture
+The codebase is structured modularly to separate the low-level peripheral drivers (UART, SPI, Keypad, LCD, RTC) from the high-level application menus.
 <p align="center">
  <img width="1536" height="1024" alt="software rfid image" src="https://github.com/user-attachments/assets/3b6ebbd8-ca0d-414b-9658-1aa57fa1afda" />
 </p>
