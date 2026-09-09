@@ -61,13 +61,13 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 </p>
 
 <p align="center">
-  <img src="docs/images/pin-entry.jpg" alt="PIN entry screen on LCD" width="31%">
-  <img src="docs/images/lcd-time-settings.jpg" alt="Date and time configuration screen on LCD" width="31%">
+  <img width="1600" height="1039" alt="WhatsApp Image 2026-09-09 at 2 21 38 PM" src="https://github.com/user-attachments/assets/7f2fad9b-2785-4028-8fb7-95d3c63e8bbb" />
   <img src="docs/images/officer-card.jpg" alt="Officer RFID card confirmation screen on LCD" width="31%">
 </p>
 
 <p align="center">
-  <img src="docs/images/settings-menu.jpg" alt="System time and licence settings menu on LCD" width="31%">
+  <img width="1280" height="760" alt="RTC" src="https://github.com/user-attachments/assets/d2266567-1daf-4a95-9d46-713b00b89614" />
+
 </p>
 
 ## RFID cards
