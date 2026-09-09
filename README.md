@@ -71,14 +71,6 @@ Each C file is compiled and linked with specific functional responsibilities to 
 
 ## ✨ System Features in Detail
 
-
-    *   `Bold Checkmark (✔)` pattern code.
-    *   `Bold Cross (✖)` pattern code.
-
----
-
-## 🗄️ EEPROM Storage & Memory Mapping (AT25LC512)
-
 The system relies on an external **AT25LC512 (512Kbit / 64KB)** EEPROM over SPI0 to maintain persistent user states.
 ### 1. 🪪 Universal RFID Authentication & Card Security
 *   **Dual Roles:** Distinguishes between standard citizens (cards registered in parallel arrays) and system administrators (Officer Master Card).
