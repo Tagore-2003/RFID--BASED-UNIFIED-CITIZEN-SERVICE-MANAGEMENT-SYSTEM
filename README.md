@@ -1,4 +1,4 @@
-##🏷️ RFID Unified Citizen System
+## RFID Unified citizen service system
 
 ![Microcontroller](https://img.shields.io/badge/Microcontroller-LPC2148-blue.svg)
 ![Language](https://img.shields.io/badge/Language-Embedded%20C-orange.svg)
@@ -39,7 +39,7 @@ The codebase is structured modularly to separate the low-level peripheral driver
  <img width="1536" height="1024" alt="software rfid image" src="https://github.com/user-attachments/assets/3b6ebbd8-ca0d-414b-9658-1aa57fa1afda" />
 </p>
 
-## Frimware Modules and Reesponsibilites 
+## Firmware Modules and Reesponsibilites 
 Each C file is compiled and linked with specific functional responsibilities to form the unified binary:
 <img width="1536" height="1024" alt="Modules menu" src="https://github.com/user-attachments/assets/c19456e9-f42f-4cae-b396-5cd5ab32e9eb" />
 
@@ -56,7 +56,6 @@ Each C file is compiled and linked with specific functional responsibilities to 
 3. Use the keypad to view records or use the ATM, voting, and licence services.
 4. Present the officer card for administrative controls.
 5. Unknown cards are rejected with the red LED and buzzer.
-6. 
 ## LCD interface
 <p align="center">
   <img width="1268" height="772" alt="citizen_service_menu" src="https://github.com/user-attachments/assets/4c234ab6-8281-4124-9c2c-67e096568098" />
@@ -96,6 +95,24 @@ The system relies on an external **AT25LC512 (512Kbit / 64KB)** EEPROM over SPI0
 *   **Custom Graphics:** Built-in CGRAM design templates inject custom validation marks directly into the HD44780 LCD module memory:
   
 ---
+## 🛠️ Low-Level Drivers & Implementation
+
+### 1. UART0 (RFID Transceiver Driver)
+*   **Baud Rate & Frame Configurations:** Runs at a baud rate of `9600` configured for an ARM core peripheral clock (Pclk) of `15MHz` (`U0DLL = 97`, `U0DLM = 0`, `8N1` Mode).
+*   **Asynchronous Interrupt Handler:** Leverages the LPC2148 UART0 RX line interrupt (`UART0_ISR` mapped in VIC slot 5) to intercept RFID frames on the fly without blocking execution. 
+*   **Framing Delimiters:** Incoming RFID streams are parsed between the standard Serial Start-of-Text (`STX = 0x02`) and End-of-Text (`ETX = 0x03`) bytes to ensure packet transmission integrity.
+*   
+### 2. Interrupt Management
+The Vectored Interrupt Controller (VIC) maps incoming hardware triggers efficiently (e.g., UART0 and EINT3)
+
+### 3. LCD Driver (8-Bit Mode)
+*   **Layout:** Operates in 8-bit bus configuration utilizing pins `P0.8 - P0.15` for data and control pins `P0.16` (RS), `P0.17` (R/W), and `P0.18` (EN).
+*   **CGRAM Interface:** Contains functions to reprogram the internal CGRAM tables of the LCD display on-the-fly, allowing graphics manipulation of custom display metrics.
+
+### 4. SPI0 Engine & Calendaring
+*   **SPI0 Init:** Standard 8-bit write-only/read SPI routines mapped directly to hardware peripheral registers (`S0SPCR`, `S0SPSR`, `S0SPDR`).
+*   **Sakamoto's Algorithm:** Integrated mathematically to keep the RTC day register (`DOW`) calculated dynamically when administrative edits occur:
+
 
 
 ## Wiring reference
