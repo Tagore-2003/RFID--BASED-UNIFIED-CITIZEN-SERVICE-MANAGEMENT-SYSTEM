@@ -67,7 +67,63 @@ Each C file is compiled and linked with specific functional responsibilities to 
   <img width="1280" height="760" alt="RTC" src="https://github.com/user-attachments/assets/d2266567-1daf-4a95-9d46-713b00b89614" />
 
 </p>
+
 The firmware expects RFID frames delimited by **STX** (`0x02`) and **ETX** (`0x03`) and compares the first eight received ID characters with its configured records. Use only authorised test cards when modifying the card database.
+## 🗺️ Main Program Flow Chart
+Here is the detailed sequential logic executed by the main program:
+
+![Main Program Flow](./New%20images/Main%20Program%20Flow%20Chart%20RFID.png)
+
+### User Menu Navigation Tree
+The interactive menu system branches out logically depending on user keystrokes:
+
+![Menu Structure](./New%20images/user%20menu%20image.png)
+
+### Firmware Modules & Responsibilities
+Each C file is compiled and linked with specific functional responsibilities to form the unified binary:
+
+![Modules and Responsibilities](./New%20images/Modules%20menu.png)
+
+---
+
+## ✨ System Features in Detail
+
+
+    *   `Bold Checkmark (✔)` pattern code.
+    *   `Bold Cross (✖)` pattern code.
+
+---
+
+## 🗄️ EEPROM Storage & Memory Mapping (AT25LC512)
+
+The system relies on an external **AT25LC512 (512Kbit / 64KB)** EEPROM over SPI0 to maintain persistent user states.
+### 1. 🪪 Universal RFID Authentication & Card Security
+*   **Dual Roles:** Distinguishes between standard citizens (cards registered in parallel arrays) and system administrators (Officer Master Card).
+*   **Loss Prevention / Blocking Mechanism:** The Officer Menu allows administrators to select any citizen by index and mark their status as `BLOCKED` (stores `0x01` at their EEPROM index). If a citizen's physical card is stolen/lost and scanned afterwards, access is immediately blocked, trigger outputs (Red LED and continuous Buzzer) are activated, and the incident is logged via serial telemetry.
+*   **Inactivity & Redraw Resiliency:** Protects user sessions with a 20-second inactivity timeout for all keypad input operations, returning to the login loop if abandoned.
+
+### 2. 🏦 Secure ATM (Automated Teller Machine) Module
+*   **Encrypted Storage:** Balances and individual ATM PINs are stored securely in external non-volatile memory.
+*   **Transactional Guards:**
+    *   Restricts withdrawals to multiples of `100`, `200`, and `500` rupees.
+    *   Enforces a minimum balance limit (`Rs. 500`) and a maximum storage boundary (`Rs. 65,535` based on 16-bit uint representation).
+    *   Authenticates with a distinct ATM-only PIN before loading the transaction screen.
+
+### 3. 🗳️ Double-Voting Prevention System
+*   **Authentication Check:** Asks for login verification before allowing voting access.
+*   **Non-Volatile Registry:** Once a citizen casts their vote for any of the 4 configured parties (**BJP, INC, AAP, BSP**), the vote state is written to EEPROM. If the user tries to access the voting screen again, the system queries the EEPROM and immediately blocks the operation with an "Already Voted!" error message.
+
+### 4. 🚗 Driving License Expiry Engine (RTC & CGRAM)
+*   **Real-time Expiry Calculation:** Automatically compares the expiration date parameters (`exp_days`, `exp_months`, `exp_years` stored per user) against the running internal Real-Time Clock (RTC) registers.
+*   **Hardware Signaling:** 
+    *   **Valid License:** Displays license details, illuminates the Green LED, and silences any buzzer alarms.
+    *   **Expired License:** Flashes a custom-built CGRAM "Bold Cross (✖)" icon on the LCD, turns on the Red LED, and sounds a warning Buzzer.
+*   **Custom Graphics:** Built-in CGRAM design templates inject custom validation marks directly into the HD44780 LCD module memory:
+![Data Storage Layout](./New%20images/Data%20storage.png)
+
+
+---
+
 
 ## Wiring reference
 
