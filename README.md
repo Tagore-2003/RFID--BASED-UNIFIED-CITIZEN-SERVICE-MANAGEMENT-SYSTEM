@@ -12,7 +12,7 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 - **Responsive UI** — keypad input uses debounce handling and timeout-aware scanning; RFID reception is interrupt-driven.
 
 ## Hardwar architecture
-
+The overall system layout connects the main controller block to various sensors, displays, inputs, and memory storage.
 <p align="center">
  <img width="1200" height="790" alt="Block_diagram" src="https://github.com/user-attachments/assets/148547b6-fdea-4f40-b188-038b22afd5fe" />
 </p>
@@ -45,6 +45,10 @@ The codebase is structured modularly to separate the low-level peripheral driver
 3. Use the keypad to view records or use the ATM, voting, and licence services.
 4. Present the officer card for administrative controls.
 5. Unknown cards are rejected with the red LED and buzzer.
+
+### Firmware Modules & Responsibilities
+Each C file is compiled and linked with specific functional responsibilities to form the unified binary:
+<img width="1536" height="1024" alt="Modules menu" src="https://github.com/user-attachments/assets/c19456e9-f42f-4cae-b396-5cd5ab32e9eb" />
 
 ## LCD interface
 
