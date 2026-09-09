@@ -165,7 +165,3 @@ This table is derived from the firmware in this repository—not copied from the
 - The sample card IDs, names, balances, and PIN values are demonstration data. Replace them before any real deployment.
 - This project is appropriate for education and laboratory demonstration. It is **not** a production-grade identity, banking, or voting system: card IDs and PIN storage need stronger security for real-world use.
 - Do not commit generated Keil binaries or per-user IDE settings. The included `.gitignore` already excludes them.
-
-## Media
-
-All images in `docs/images/` are project documentation supplied by the repository owner. They are included to show the actual prototype and interface states.
