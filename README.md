@@ -20,7 +20,8 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
 ## System architecture
 
 <p align="center">
-  <img src="docs/images/system-architecture.png" alt="Block diagram showing keypad and RFID reader connected to LPC2148, with LCD, indicators, and EEPROM outputs" width="620">
+  <img width="720" height="1600" alt="WhatsApp Image 2026-09-09 at 2 09 54 PM" src="https://github.com/user-attachments/assets/6f091789-984c-4a35-bcda-37096204d5b0" />
+
 </p>
 
 | Block | Role |
