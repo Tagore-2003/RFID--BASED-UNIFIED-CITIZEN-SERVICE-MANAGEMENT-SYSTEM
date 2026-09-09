@@ -47,7 +47,8 @@ The system reads an RFID card over UART, authenticates the card ID, stores persi
   <img width="1600" height="1039" alt="WhatsApp Image 2026-09-09 at 2 21 38 PM" src="https://github.com/user-attachments/assets/7f2fad9b-2785-4028-8fb7-   95d3c63e8bbb" />
   <img width="1599" height="920" alt="Pan" src="https://github.com/user-attachments/assets/ee1c4891-aed1-42ca-906c-1462aaa80ebf" />
   <img width="1280" height="766" alt="ATM_interfcae" src="https://github.com/user-attachments/assets/8e3e2b73-26e0-4027-87b3-6b985dbfd923" />
-  <img src="docs/images/officer-card.jpg" alt="Officer RFID card confirmation screen on LCD" width="31%">
+  <img width="1280" height="785" alt="officer_status" src="https://github.com/user-attachments/assets/c1493aa2-5867-4c3b-ba65-00fe2aa5fd16" />
+
   <img width="1280" height="760" alt="RTC" src="https://github.com/user-attachments/assets/d2266567-1daf-4a95-9d46-713b00b89614" />
 
 </p>
