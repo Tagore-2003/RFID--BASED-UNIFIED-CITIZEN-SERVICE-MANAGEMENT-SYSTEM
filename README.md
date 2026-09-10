@@ -38,7 +38,7 @@ The codebase is structured modularly to separate the low-level peripheral driver
  <img width="1536" height="1024" alt="software rfid image" src="https://github.com/user-attachments/assets/3b6ebbd8-ca0d-414b-9658-1aa57fa1afda" />
 </p>
 
-## Firmware Modules and Reesponsibilites 
+## Firmware Modules and Responsibilites 
 Each C file is compiled and linked with specific functional responsibilities to form the unified binary:
 <img width="1536" height="1024" alt="Modules menu" src="https://github.com/user-attachments/assets/c19456e9-f42f-4cae-b396-5cd5ab32e9eb" />
 
