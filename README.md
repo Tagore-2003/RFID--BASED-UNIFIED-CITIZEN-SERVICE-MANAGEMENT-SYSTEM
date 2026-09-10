@@ -20,8 +20,7 @@ By scanning a unique citizen RFID card, authenticated users can access their Ban
 ## Hardware architecture
 The overall system layout connects the main controller block to various sensors, displays, inputs, and memory storage.
 <p align="center">
- <img width="1200" height="790" alt="Block_diagram" src="https://github.com/user-attachments/assets/148547b6-fdea-4f40-b188-038b22afd5fe" />
-</p>
+ <img width="1536" height="1024" alt="new_block_diagram" src="https://github.com/user-attachments/assets/93e0912b-75d0-496d-9ebc-911945c95ba4" />
 
 | Block | Role |
 | --- | --- |
@@ -59,7 +58,6 @@ Each C file is compiled and linked with specific functional responsibilities to 
 ## LCD interface
 <p align="center">
   <img width="1268" height="772" alt="citizen_service_menu" src="https://github.com/user-attachments/assets/4c234ab6-8281-4124-9c2c-67e096568098" />
-  <img width="1600" height="1039" alt="WhatsApp Image 2026-09-09 at 2 21 38 PM" src="https://github.com/user-attachments/assets/7f2fad9b-2785-4028-8fb7-   95d3c63e8bbb" />
   <img width="1599" height="920" alt="Pan" src="https://github.com/user-attachments/assets/ee1c4891-aed1-42ca-906c-1462aaa80ebf" />
   <img width="1280" height="766" alt="ATM_interfcae" src="https://github.com/user-attachments/assets/8e3e2b73-26e0-4027-87b3-6b985dbfd923" />
   <img width="1280" height="785" alt="officer_status" src="https://github.com/user-attachments/assets/c1493aa2-5867-4c3b-ba65-00fe2aa5fd16" />
